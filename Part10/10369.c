@@ -1,5 +1,5 @@
 #include <stdio.h>
-//
+
 typedef int Status;
 typedef struct{
     int year;
