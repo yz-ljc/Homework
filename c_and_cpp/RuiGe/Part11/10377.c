@@ -25,7 +25,7 @@ int main()
             print(i,temp);
             break;
         }
-        else if (input >= '0' && input <= '9'){
+        if (input >= '0' && input <= '9'){
             temp[i] = input;
             is_num = 1;
             i++;
