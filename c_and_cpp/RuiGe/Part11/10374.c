@@ -1,34 +1,39 @@
 #include <stdio.h>
+#include <string.h>
 
 void itos(int n,char *str)
 {
-    int tmp1 = n;
+    // n = 0
     if (n == 0){
         *str = '0';
         str++;
         *str = '\0';
         return;
     }
-    if (tmp1 < 0)  tmp1 = -tmp1;
+
+    // n < 0
+    if (n < 0){
+        *str = '-';
+        n = -n;
+        str++;
+    }
+
+    //  逆置
+    int tmp1 = n;
     while (tmp1 != 0){
         tmp1 = tmp1 / 10;
         str++;
     }
-    int tmp2 = n;
-    if (n < 0){
-        str++;
-        tmp2 = -tmp2;
-    }
+
+    // Put \0 to the end of the str
     *str = '\0';
     str--;
 
-    while (tmp2 != 0){
-        *str = (tmp2 % 10) + '0';
+    // Swap integer into string
+    while (n != 0){
+        *str = (n % 10) + '0';
         str--;
-        tmp2 /= 10;
-    }
-    if (n < 0){
-        *str = '-';
+        n /= 10;
     }
 }
 

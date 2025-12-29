@@ -2,12 +2,12 @@
 
 void print(int counter,char nums[])
 {
-    const int len = 7;
-    for (int i = 0;i<len-counter;i++){
-        printf(" ");
+    int result = 0;
+    for (int i = 0;i < counter;i++){
+        result = result * 10 + (nums[i] - '0');
     }
-    for (int j = 0;j<counter;j++){
-        printf("%c",nums[j]);
+    if (counter > 0){
+        printf("%7d",result);
     }
 }
 
