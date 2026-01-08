@@ -1,15 +1,12 @@
-//喜欢我的指针满天飞吗老铁
-//喜欢我的指针满天飞吗老铁
-//喜欢我的指针满天飞吗老铁
 #include <stdio.h>
 
 int main()
 {
-    float money_original = 0;
+    float originalMoney = 0;
     int arr[12] = {0};
     printf("输入金额:\n");
-    scanf("%f",&money_original);
-    int money = money_original * 100;
+    scanf("%f",&originalMoney);
+    int money = originalMoney * 100;
     int count[] = {
         10000,
         5000,
@@ -43,47 +40,3 @@ int main()
     }
     return 0;
 }
-
-
-/*        if (money >= 10000){
-            arr[0] += 1;
-            money = money - 10000;
-        }
-        else if (money >= 5000){
-            arr[1] += 1;
-            money = money - 5000;
-        }
-        else if (money >= 2000){
-            arr[2] += 1;
-            money = money - 2000;
-        }
-        else if (money >= 1000){
-            arr[3] += 1;
-            money = money - 1000;
-        }
-        else if (money >= 500){
-            arr[4] += 1;
-            money = money - 500;
-        }
-        else if (money >= 100){
-            arr[5] += 1;
-            money = money - 100;
-        }
-        else if (money >= 50){
-            arr[6] += 1;
-            money = money - 50;
-        }
-        else if (money >= 10){
-            arr[7] += 1;
-            money = money - 10;
-        }
-        else if (money >= 5){
-            arr[8] += 1;
-            money = money - 5;
-        }
-        else {
-            arr[9] += 1;
-            money = money - 1;
-        }
-    }
-    */

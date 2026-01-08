@@ -3,16 +3,16 @@
 
 int main()
 {
-    char text[100];
-    fgets(text,sizeof(text),stdin);
-    for (int i = 0;i<strlen(text);i++){
-        if ((text[i] < 'W' && text[i] >= 'A') || (text[i] < 'w' && text[i] >= 'a')){
-            text[i] += 4;
+    char str[100];
+    gets(str);
+    for (int i = 0;str[i] != '\0';i++){
+        if ((str[i] < 'W' && str[i] >= 'A') || (str[i] < 'w' && str[i] >= 'a')){
+            str[i] += 4;
         }
-        else if ((text[i] <= 'Z' && text[i] >= 'W') || (text[i] <= 'z' && text[i] >= 'w')){
-            text[i] -= 22;
+        else if ((str[i] <= 'Z' && str[i] >= 'W') || (str[i] <= 'z' && str[i] >= 'w')){
+            str[i] -= 22;
         }
     }
-    printf("%s",text);
+    printf("%s",str);
     return 0;
 }

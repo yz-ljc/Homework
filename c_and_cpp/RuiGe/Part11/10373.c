@@ -2,27 +2,13 @@
 
 int fib(int n)
 {
-    int result = 0;
-    int a=0,b=0,c=1,d=0,temp=0;
     if (n == 1 || n == 2){
-        result = 0;
+        return 0;
     }
-    else if (n == 3){
-        result = 1;
+    if (n == 3){
+        return 1;
     }
-    else{
-        int i = 4;
-        while (i <= n){
-            d = a + b + c;
-            temp = a;
-            a = b;
-            b = c;
-            c = d;
-            i++;
-        }
-        result = d;
-    }
-    return result;
+    return fib(n-1) + fib(n-2) + fib(n-3);
 }
 int main()
 {
